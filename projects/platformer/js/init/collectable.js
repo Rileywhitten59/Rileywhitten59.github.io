@@ -37,8 +37,8 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCollectable (type.json, 200, 170, 6, 0.7);
-        
+        createCollectable (type.db, 200, 170, 6, 0.7);
+        createCollectable ( )
         
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
