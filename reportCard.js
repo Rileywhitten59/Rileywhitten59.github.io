@@ -1,31 +1,34 @@
 var letterGrade;
+var sumGPA = 0;
 var class1 = prompt("What is your first class?");
 var class1Avg = testAverage();
 
 classGrade(class1Avg);
-document.write(class1Avg);
+document.write("<li> Class 1 Average: "+ class1Avg + "</li>");
 GPACalculator(class1Avg);
 
 var class2 = prompt("What is your second class?");
 var class2Avg = testAverage();
 
 classGrade(class2Avg);
-document.write(class2Avg);
+document.write("<li> Class 2 Average: " + class2Avg + "</li>");
 GPACalculator(class2Avg);
 
 var class3 = prompt("What is your third class?");
 var class3Avg = testAverage();
 
 classGrade(class3Avg);
-document.write(class3Avg);
+document.write("<li> Class 3 Average: " + class3Avg + "</li>");
 GPACalculator(class3Avg);
 
 var class4 = prompt("What is your fourth class?");
 var class4Avg = testAverage();
 
 classGrade(class4Avg);
-document.write(class4Avg);
+document.write("<li> Class 4 Average: " + class4Avg + "</li>");
 GPACalculator(class4Avg);
+
+GPAAverage();
 
 //Define functions below here
 function GPACalculator(grade){
@@ -45,7 +48,8 @@ function GPACalculator(grade){
   else if(grade <= 66){
     GPA = "0.0";
   }
-  document.write(GPA);
+  document.write("<li> GPA: " + GPA + "</li>");
+  sumGPA += Number(GPA);
   return GPA;
 }
 function testAverage(){
@@ -75,6 +79,11 @@ function classGrade(grade){
     letterGrade = "F";
   }
   
-  document.write(letterGrade);
+  document.write("<li> Class Letter Grade: " + letterGrade + "</li>");
   return letterGrade;
+}
+
+function GPAAverage(){
+  var overallGPA = sumGPA / 4;
+  document.write("<li> Overall GPA: " + overallGPA + "</li>");
 }
