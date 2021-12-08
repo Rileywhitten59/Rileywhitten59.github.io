@@ -32,8 +32,8 @@ var circles = [];
         }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
-            drawCircle(loopsCompleted);
+        for (var loopsCompleted = 0; loopsCompleted < 99; loopsCompleted++) {
+            drawCircle();
         
         }
         ////////////////////////////////////////////////////////////
@@ -48,18 +48,16 @@ var circles = [];
         function update() {
             // TODO 4 : Update the circle's position //
             
-            for (var i = 0; i < myArray.length; i++) {
-                var eachValue = myArray[i];
+            for (var i = 0; i < 99; i++) {
+                physikz.updatePosition(circles[i]);
                 
                 // code to repeat using eachValue
             }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(circles[0]);
-            game.checkCirclePosition(circles[1]);
-            game.checkCirclePosition(circles[2]);
-            game.checkCirclePosition(circles[3]);
-            game.checkCirclePosition(circles[4]);
+            for(var j = 0; j < 99; j++){
+            game.checkCirclePosition(circles[j]);
+            }
 
             // TODO 9 : Iterate over the array
             
